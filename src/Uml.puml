@@ -1,0 +1,32 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Semaforo{
+- colorActual: String
++ mostrarAviso():String
++ cambiarEstado()String
+}
+
+interface StateSemaforo <<interface>>{
++ mostrarAviso():String
++ cambiarEstado()String
+}
+class Seguir implements  StateSemaforo{
+- s : Semaforo
++ mostrarAviso():String
++ cambiarEstado()String
+}
+class Parar implements  StateSemaforo{
+- s : Semaforo
++ mostrarAviso():String
++ cambiarEstado()String
+}
+class Alistar implements  StateSemaforo{
+- s : Semaforo
++ mostrarAviso():String
++ cambiarEstado()String
+}
+
+Semaforo "1" o-l  "*" StateSemaforo
+
+@enduml
